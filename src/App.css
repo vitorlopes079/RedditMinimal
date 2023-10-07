@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+.Header-navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #afd2ee;
+  font-family: "Libre Baskerville";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header-logo {
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header-logo h4 {
+  padding-top: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
+.Header-navBar span {
+  color: #274c77;
+}
+
+.SearchBar-input {
+  border: none;
+  width: 300px;
+  height: 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: white;
+  font-family: "Libre Baskerville";
+}
+
+input:focus,
+input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.SearchBar-button {
+  border: none;
+
+  cursor: pointer;
+  margin-left: 8px;
+  background-color: #afd2ee;
+}
+
+main {
+  background-color: #e7ecef;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
   min-height: 100vh;
+}
+
+.AllPosts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750px;
+  background-color: #fefeff;
+  box-shadow: 5px 5px 5px #888888;
+  margin-top: 35px;
+}
+
+.AllPosts-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AllPosts-container a:hover {
+  text-decoration: underline;
+}
+
+.AllPosts-container h2 {
+  margin: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.AllPosts-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.AllPosts-postedBy {
+  font-family: "Pacifico", cursive;
+}
+
+.AllPosts-container .author {
+  color: #274c77;
+}
+
+.AllPosts-container .time-since {
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
+  color: #8b8c89;
+  font-size: 19px;
+}
+
+.AllPosts-container .comments {
+  color: #8b8c89;
+  font-family: "Pacifico", cursive;
+}
+
+.Post-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 750px;
+  background-color: #fefeff;
+  box-shadow: 5px 5px 5px #888888;
+  margin-top: 35px;
+  padding-bottom: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+.Post-container h2{
+  margin: 30px 30px 20px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Post-container p{
+  margin: 0 30px 20px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.Post-conditional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Post-conditional a {
+  color: blue;
 }
