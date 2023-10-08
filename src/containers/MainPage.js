@@ -1,11 +1,12 @@
 import React from "react";
-
+import Loading from "../components/Loading";
+import NetworkError from "../components/NetworkError";
 import AllPosts from "../components/AllPosts";
 
-const MainPage = ({ data, isLoading }) => {
+const MainPage = ({ data, isLoading, error }) => {
   function getTimeSincePost(created_utc) {
-    const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds since the Unix epoch
-    const elapsedTime = currentTime - created_utc; // Time since the post in seconds
+    const currentTime = Math.floor(Date.now() / 1000);
+    const elapsedTime = currentTime - created_utc; //
 
     const secondsInAnHour = 3600;
     const secondsInADay = 86400;
@@ -21,7 +22,15 @@ const MainPage = ({ data, isLoading }) => {
 
   function content() {
     if (isLoading) {
-      return "Loading new results..."; // or any loading spinner component you have
+      return (
+        <div className="loading-div">
+          <Loading loading={isLoading} />
+        </div>
+      );
+    }
+    if (error) {
+      // Check if there's an error
+      return <NetworkError error={error} />;
     }
 
     if (data) {
@@ -63,7 +72,11 @@ const MainPage = ({ data, isLoading }) => {
         );
       });
     } else {
-      return "Loading";
+      return (
+        <div className="loading-div">
+          <Loading loading={isLoading} />
+        </div>
+      );
     }
   }
   return <div className="Main-page">{content()}</div>;

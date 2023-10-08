@@ -75,7 +75,7 @@ main {
 
 .AllPosts-container h2 {
   margin: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
@@ -118,15 +118,15 @@ main {
   padding-bottom: 35px;
 }
 
-.Post-container h2{
+.Post-container h2 {
   margin: 30px 30px 20px 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-.Post-container p{
+.Post-container p {
   margin: 0 30px 20px 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
 
@@ -139,4 +139,46 @@ main {
 
 .Post-conditional a {
   color: blue;
+}
+
+.loading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.Error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 750px;
+  height: 380px;
+  background-color: #fefeff;
+  box-shadow: 5px 5px 5px #888888;
+  margin-top: 35px;
+  padding-bottom: 25px 0;
+}
+
+.Error-container h1 {
+  margin: 30px 30px 20px 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 80px;
+  color: #274c77;
+}
+
+.Error-container h4 {
+  margin: 20px 30px 20px 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  color: #274c77;
+  text-align: center;
+}
+
+.image-container {
+  overflow: hidden;
+  display: grid;
 }
