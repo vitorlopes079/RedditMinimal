@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-const AllPosts = ({
+const Posts = ({
   title,
   author,
   timeSince,
@@ -21,14 +21,14 @@ const AllPosts = ({
   function handleImageOrientation(e) {
     const img = e.target;
     if (img.naturalWidth > img.naturalHeight) {
-        img.width = 400;
+        img.width = 480;
         img.height = 320; 
     } else if (img.naturalWidth < img.naturalHeight) {
         img.width = 320;
-        img.height = 400;
+        img.height = 420;
     } else {
-        img.width = 320;
-        img.height = 320;
+        img.width = 350;
+        img.height = 350;
     }
   }
 
@@ -67,4 +67,4 @@ const AllPosts = ({
   );
 }
 
-export default AllPosts;
+export default Posts;

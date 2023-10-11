@@ -3,13 +3,17 @@
   justify-content: space-around;
   align-items: center;
   height: 60px;
-  background-color: #afd2ee;
+  background-color: #333;
   font-family: "Libre Baskerville";
+  border-bottom: 1px solid #f9f8e4;
+  position: fixed;
+  width: 100%;
 }
 
 .Header-logo {
   display: flex;
   align-items: center;
+  color: #f9f8e4;
 }
 
 .Header-logo h4 {
@@ -17,7 +21,7 @@
 }
 
 .Header-navBar span {
-  color: #274c77;
+  color: #819ea2;
 }
 
 .SearchBar-input {
@@ -26,8 +30,9 @@
   height: 25px;
   font-size: 16px;
   border-radius: 5px;
-  background-color: white;
+  background-color: #f9f8e4;
   font-family: "Libre Baskerville";
+  font-family: 'DM Sans', sans-serif;
 }
 
 input:focus,
@@ -38,17 +43,17 @@ input:active {
 
 .SearchBar-button {
   border: none;
-
   cursor: pointer;
   margin-left: 8px;
-  background-color: #afd2ee;
+  background-color: #333;
+  color: #f9f8e4;
 }
 
 main {
-  background-color: #e7ecef;
+  background-color: #819ea2;
   display: flex;
   flex-direction: column;
-
+  padding-top: 40px;
   align-items: center;
 
   min-height: 100vh;
@@ -59,7 +64,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 750px;
-  background-color: #fefeff;
+  background-color: #f9f8e4;
   box-shadow: 5px 5px 5px #888888;
   margin-top: 35px;
 }
@@ -75,8 +80,8 @@ main {
 
 .AllPosts-container h2 {
   margin: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-family: "Courier Prime", monospace;
+  letter-spacing: -1px;
 }
 
 .AllPosts-footer {
@@ -112,7 +117,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 750px;
-  background-color: #fefeff;
+  background-color: #f9f8e4;
   box-shadow: 5px 5px 5px #888888;
   margin-top: 35px;
   padding-bottom: 35px;
@@ -120,8 +125,8 @@ main {
 
 .Post-container h2 {
   margin: 30px 30px 20px 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-family: "Courier Prime", monospace;
+  letter-spacing: -1px;
 }
 
 .Post-container p {
@@ -152,7 +157,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   width: 750px;
   height: 380px;
   background-color: #fefeff;
@@ -163,7 +168,8 @@ main {
 
 .Error-container h1 {
   margin: 30px 30px 20px 30px;
-  font-family: "Roboto", sans-serif;
+  background-color: #f9f8e4;
+  font-family: monospace;
   font-weight: 500;
   font-size: 80px;
   color: #274c77;
@@ -181,4 +187,250 @@ main {
 .image-container {
   overflow: hidden;
   display: grid;
+}
+
+.PostDetail-Conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+
+.Comments-container {
+  margin-top: 35px;
+  width: 750px;
+  background-color: #f9f8e4;
+  font-family: monospace;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border: 1px solid #f9f8e4;
+}
+
+.Comments-container h3 {
+  text-align: center;
+}
+
+.Comments-container h4,
+p {
+  padding: 0;
+  margin: 5px;
+}
+
+.Comments-container .comment-box {
+  margin: 15px;
+}
+
+/* CSS */
+.button-30 {
+  text-align: center;
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 14px;
+}
+
+.button-30:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.read-more button:hover {
+  cursor: pointer;
+}
+
+.comment-box-button {
+  display: block;
+  border: none;
+  background: none;
+  color: #274c77;
+  font-size: 10px;
+  text-decoration: underline;
+  padding: 5px;
+}
+
+.comment-box-button:hover {
+  cursor: pointer;
+}
+
+.read-more {
+  display: inline;
+  border: none;
+  background: none;
+  color: #274c77;
+  font-size: 10px;
+  text-decoration: underline;
+  padding: 5px;
+}
+
+.read-more:hover {
+  cursor: pointer;
+}
+
+.SideNavBar {
+  min-width: 205px;
+  max-width: 205px;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #333;
+  max-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  overflow-y: auto;
+  padding-top: 20px;
+  transition: 0.3s;
+  border-top: solid 1px #f9f8e4;
+  border-right: solid 1px #f9f8e4;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-items: center;
+  font-size: 14px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.SideNavBar p {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.SideNavBar p:hover {
+  background-color: #575757;
+  color: white;
+}
+
+.SideNavBar .popular {
+  border-bottom: solid 1px #f9f8e4;
+  min-height: 75px;
+  display: block;
+
+  text-align: center;
+}
+
+.SideNavBar .icon {
+  padding: 0 2px;
+}
+.SideNavBar .icon:hover {
+  cursor: pointer;
+}
+
+.SideNavBar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.SideNavBar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.SideNavBar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.SideNavBar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+.SideNavBar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.subjects {
+  padding-top: 20px;
+}
+
+.subjectItem {
+  display: flex;
+  flex-direction: column;
+}
+.subjectItem .icon:hover {
+  background-color: #575757;
+  color: white;
+}
+
+.subjectItem .icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subjectItem .moreSubjects:hover{
+  cursor: pointer;
+}
+
+.hidden-topics p{
+  cursor: pointer;
+}
+
+.arrow {
+  padding-right: 12px;
+  color: #f9f8e4;
+}
+
+.sideBarButton {
+  appearance: none;
+  background: transparent;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: #f9f8e4;
+  font-size: 16px;
+  padding: 10px;
+
+  margin: 0 15px;
+  border-radius: 10px;
+}
+.sideBarButton:hover {
+  background-color: #575757;
+}
+
+.hidden-topics:hover {
+  cursor: pointer;
 }

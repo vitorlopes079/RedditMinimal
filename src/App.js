@@ -1,11 +1,10 @@
 import "./App.css";
-import MainPage from "./containers/MainPage";
+import HomePage from "./containers/HomePage";
 import Layout from "./components/Layout";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Post from "./components/Post";
+import PostDetail from "./containers/PostDetail";
 import NotFound from "./components/NotFound";
-
 
 function App() {
   const [data, setData] = useState("");
@@ -29,14 +28,17 @@ function App() {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        
+
         const result = await response.json();
         setData(result);
         setIsLoading(false);
       } catch (error) {
         console.error("There was an error fetching the data: ", error);
+        setData("");  // Resetting the data here
         setIsLoading(false);
-        setError("There was an issue fetching the posts. Please try again later.")
+        setError(
+          "There was an issue fetching the posts. Please try again later."
+        );
       }
     };
 
@@ -60,10 +62,12 @@ function App() {
         <Route path="/" element={<Layout onSearch={handleSearch} />}>
           <Route
             index
-            element={<MainPage data={data} isLoading={isLoading} error={error}/>}
+            element={
+              <HomePage data={data} isLoading={isLoading} error={error} />
+            }
             errorElement={<p>There was a error</p>}
           />
-          <Route path="post/:id" element={<Post />} />
+          <Route path="post/:id" element={<PostDetail />} />
           <Route
             errorElement={<p>There was a error</p>}
             path="*"
