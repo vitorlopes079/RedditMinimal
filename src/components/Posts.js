@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import "../css/Posts.css"
 
 const Posts = ({
   title,
@@ -33,16 +34,18 @@ const Posts = ({
   }
 
   return (
-    <div className="AllPosts-container">
+    <div className="Posts">
       <h2>
          <Link to={`post/${postId}`} dangerouslySetInnerHTML={createMarkup(title)} />
       </h2>
 
       {videoUrl && (
-        <video controls width="100%" height="550px">
+        <div className="video-container">
+        <video controls>
           <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      </div>
       )}
 
       {isImagePost && !isVideoLink && (
@@ -53,11 +56,11 @@ const Posts = ({
         />
       )}
 
-      <div className="AllPosts-footer">
-        <p className="AllPosts-postedBy">
+      <div className="footer">
+        <p className="postedBy">
           posted by: <span className="author">{author}</span>
         </p>
-        <p className="time-since">{timeSince}</p>
+        <p className="timeSince">{timeSince}</p>
         <p className="comments">
           <FontAwesomeIcon icon={faCommentAlt} color="#8b8c89" />
           {` ${numComments}`}

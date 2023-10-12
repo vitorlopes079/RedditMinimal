@@ -12,3 +12,50 @@ code {
     monospace;
 }
 
+.loading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.Error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Courier Prime", monospace;
+  height: 380px;
+  background-color: #f9f8e4;
+  box-shadow: 5px 5px 5px #888888;
+  margin-top: 35px;
+  width: 90%;
+  max-width: 750px;
+  padding-bottom: 35px;
+  border-radius: 5px;
+}
+
+.Error-container h1 {
+  margin: 2rem 2rem 1.5rem; 
+  font-weight: 500;
+  font-size: 4rem; 
+}
+
+.Error-container h4 {
+  margin: 1.5rem 2rem;
+  font-weight: 300;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .Error-container h1 {
+    font-size: 3.5rem;
+  }
+  
+  .Error-container h4 {
+    font-size: 1.8rem;
+  }
+}

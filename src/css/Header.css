@@ -1,0 +1,54 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3.75rem;
+  background-color: #333;
+  font-family: "Libre Baskerville";
+  border-bottom: 1px solid #f9f8e4;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.Header .logo {
+  display: flex;
+  align-items: center;
+  color: #f9f8e4;
+}
+
+.Header .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Header .logo h4 {
+  padding-top: 3px;
+  font-size: 1.2rem;
+}
+
+.Header span {
+  color: #819ea2;
+}
+
+@media (max-width: 768px) {
+  .Header {
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .Header .logo h4 {
+    font-size: 1rem; 
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1110px) {
+  .Header {
+      padding: 0 15px; 
+  }
+
+  .Header .logo h4 {
+      font-size: 1.15rem; 
+      padding-top: 2.5px; 
+  }
+}

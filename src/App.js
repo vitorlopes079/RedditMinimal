@@ -12,16 +12,21 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     // Function to fetch data from the Reddit API
     const fetchData = async () => {
       // Determine the endpoint based on the presence of a searchTerm
       const endpoint = searchTerm
-        ? `https://www.reddit.com/search.json?q=${encodeURIComponent(
-            searchTerm
-          )}`
+        ? searchTerm.startsWith("r/")
+          ? `https://www.reddit.com/${searchTerm}.json`
+          : `https://www.reddit.com/search.json?q=${encodeURIComponent(
+              searchTerm
+            )}`
         : "https://www.reddit.com/r/popular.json";
+
+        console.log("endpoint", endpoint)
 
       try {
         const response = await fetch(endpoint);
@@ -34,7 +39,7 @@ function App() {
         setIsLoading(false);
       } catch (error) {
         console.error("There was an error fetching the data: ", error);
-        setData("");  // Resetting the data here
+        setData(""); // Resetting the data here
         setIsLoading(false);
         setError(
           "There was an issue fetching the posts. Please try again later."
@@ -51,7 +56,13 @@ function App() {
 
   // Handle search submission
   const handleSearch = (term) => {
-    setSearchTerm(term);
+    if (term.startsWith("community:")) {
+      setSearchTerm(`r/${term.split("community:")[1]}`);
+    } else if (term.toLowerCase() === "popular") {
+      setSearchTerm("");
+    } else {
+      setSearchTerm(term);
+    }
     setTriggerSearch(true);
     setIsLoading(true);
   };

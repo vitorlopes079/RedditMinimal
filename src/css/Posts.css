@@ -1,0 +1,135 @@
+.Posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 750px;
+    background-color: #f9f8e4;
+    box-shadow: 5px 5px 5px #888888;
+    margin-top: 35px;
+    border-radius: 5px;
+  }
+  
+  .Posts a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .Posts a:hover {
+    text-decoration: underline;
+  }
+  
+  .Posts h2 {
+    margin: 30px;
+    font-family: "Courier Prime", monospace;
+    letter-spacing: -1px;
+  }
+  
+  .Posts .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .Posts .postedBy {
+    font-family: "Pacifico", cursive;
+  }
+  
+  .Posts .author {
+    color: #274c77;
+  }
+  
+  .Posts .timeSince {
+    font-family: "Pacifico", cursive;
+    font-weight: 700;
+    color: #8b8c89;
+    font-size: 19px;
+  }
+  
+  .Posts .comments {
+    color: #8b8c89;
+    font-family: "Pacifico", cursive;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    overflow: hidden;
+  }
+  
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 780px) and (max-width: 1100px){
+    
+      .Posts {
+          width: 75%;  
+          max-width: 715px; 
+          margin-top: 30px;  
+      }
+    
+      .Posts h2 {
+          margin: 27.5px; 
+          font-size: 1.4rem;  
+      }
+    
+      .Posts .footer {
+          padding: 0 15px; 
+      }
+    
+      .Posts .timeSince {
+          font-size: 18px; 
+      }
+    
+      .Posts .comments, .Posts .postedBy {
+          font-size: 0.95rem;
+      }
+    }
+
+  
+  
+@media (min-width: 1100px) and (max-width: 1300px) {
+  .Posts {
+      width: 75%;
+      max-width: 680px;
+      margin-top: 25px; 
+  }
+
+  .Posts h2 {
+      margin: 25px; 
+      font-size: 1.4rem; 
+  }
+
+  .Posts .footer {
+      padding: 0 10px;
+  }
+
+  .Posts .timeSince {
+      font-size: 17px; 
+  }
+
+  .Posts .comments, .Posts .postedBy {
+      font-size: 0.9rem; 
+  }
+}
+
+
+  @media (max-width: 600px) {
+    .Posts h2 {
+      font-size: 18px; 
+      margin: 20px;
+    }
+    
+    .Posts .timeSince {
+      font-size: 16px; 
+    }
+    
+    
+  }

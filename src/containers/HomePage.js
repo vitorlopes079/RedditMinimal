@@ -76,7 +76,7 @@ const HomePage = ({ data, isLoading, error }) => {
       );
     }
   }
-  return <div className="HomePage">{content()}</div>;
+  return <div className="Posts-container">{content()}</div>;
 };
 
 export default HomePage;

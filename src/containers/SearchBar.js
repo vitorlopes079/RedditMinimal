@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import "../css/SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
@@ -10,20 +11,24 @@ const SearchBar = ({ onSearch }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSearch(query);
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <form className="SearchBar-form" onSubmit={handleSubmit}>
+    <form className="SearchBar" onSubmit={handleSubmit}>
       <input
-        className="SearchBar-input"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search..."
       />
-      <button type="submit" className="SearchBar-button">
-        <FontAwesomeIcon icon={faSearch} aria-hidden="true" className="fa-lg" />
+      <button type="submit" className="btn">
+        <FontAwesomeIcon
+          icon={faSearch}
+          aria-hidden="true"
+          className="fa-lg"
+          style={{ fontSize: "1.31rem" }}
+        />
       </button>
     </form>
   );

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from 'react-router-dom';
+import "../css/SideNavBar.css"
 import {
   faUpLong,
   faGamepad,
@@ -39,9 +41,11 @@ import {
 const SideNavBar = ({ onClick }) => {
   const [showAllTopics, setShowAllTopics] = useState(false);
   const [expandedSubject, setExpandedSubject] = useState("");
+  const navigate = useNavigate()
 
   const handleClick = (event) => {
-    onClick(event.target.innerText);
+    onClick(event.target.innerText.trim());
+    navigate('/')
   };
 
   const toggleSubject = (subjectId) => {
@@ -55,7 +59,7 @@ const SideNavBar = ({ onClick }) => {
   return (
     <div className="SideNavBar">
       <div className="popular icon">
-        <p>
+        <p onClick={(event) => handleClick(event)}>
           <FontAwesomeIcon icon={faUpLong} className="icon" /> Popular
         </p>
       </div>

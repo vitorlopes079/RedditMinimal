@@ -1,7 +1,8 @@
 import React from "react";
 import gfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
-import placeholderImage from "../assets/no_media.png"; 
+import placeholderImage from "../assets/no_media.png";
+import "../css/PostContent.css";
 
 const PostContent = ({ post }) => {
   function handleImageError(e) {
@@ -39,9 +40,9 @@ const PostContent = ({ post }) => {
   const imageUrl = isImagePost ? post.data.url : post.data.thumbnail;
 
   return (
-    <div className="Post-container">
+    <div className="PostContent">
       <h2 dangerouslySetInnerHTML={createMarkup(post.data.title)}></h2>
-      
+
       {post.data.selftext && (
         <ReactMarkdown remarkPlugins={[gfm]}>
           {post.data.selftext}
@@ -49,10 +50,12 @@ const PostContent = ({ post }) => {
       )}
 
       {post.data.is_video && (
-        <video controls width="100%" height="550px">
-          <source src={videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="video-container">
+          <video controls>
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       )}
 
       {isImagePost && (
@@ -60,11 +63,11 @@ const PostContent = ({ post }) => {
           <img
             src={imageUrl}
             alt="Post media"
-            onLoad={handleImageOrientation}  
+            onLoad={handleImageOrientation}
             onError={handleImageError}
           />
           {isVideoLink && (
-            <p className="Post-conditional">
+            <p className="conditional">
               <a href={post.data.url} target="_blank" rel="noopener noreferrer">
                 View video on Reddit
               </a>

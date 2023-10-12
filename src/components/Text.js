@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
-
-const Text = ({ text = '', maxLength = 100 }) => {
+import React, { useState } from "react";
+import "../css/Text.css";
+const Text = ({ text = "", maxLength = 100 }) => {
   const [showFullText, setShowFullText] = useState(false);
 
   // Ensuring text is a string and truncating it
-  const truncatedText = text.length > maxLength
-    ? `${text.substring(0, maxLength)}...`
-    : text;
+  const truncatedText =
+    text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
 
   return (
-    <span className="text">
+    <span className="Text">
       {showFullText ? text : truncatedText}
-      {text.length > maxLength && !showFullText && (
-        <button className="read-more" onClick={() => setShowFullText(true)}>
-          Read more
+      {text.length > maxLength && (
+        <button
+          className="read-more"
+          onClick={() => setShowFullText(!showFullText)}
+        >
+          {showFullText ? "Read less" : "Read more"}
         </button>
       )}
     </span>

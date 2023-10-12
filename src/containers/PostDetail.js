@@ -5,6 +5,7 @@ import NotFound from "../components/NotFound";
 import NetworkError from "../components/NetworkError";
 import PostContent from "../components/PostContent";
 import Comments from "../components/Comments";
+import "../css/PostDetail.css";
 
 function PostDetail() {
   const { id } = useParams();
@@ -19,17 +20,21 @@ function PostDetail() {
     const fetchPostAndComments = async () => {
       try {
         // Fetch post
-        const postResponse = await fetch(`https://www.reddit.com/by_id/t3_${id}.json`);
+        const postResponse = await fetch(
+          `https://www.reddit.com/by_id/t3_${id}.json`
+        );
         if (!postResponse.ok) throw new Error("Error fetching the post");
         const postData = await postResponse.json();
         setData(postData);
 
         // Fetch comments
-        const commentsResponse = await fetch(`https://www.reddit.com/comments/${id}.json`);
-        if (!commentsResponse.ok) throw new Error("Error fetching the comments");
+        const commentsResponse = await fetch(
+          `https://www.reddit.com/comments/${id}.json`
+        );
+        if (!commentsResponse.ok)
+          throw new Error("Error fetching the comments");
         const commentsData = await commentsResponse.json();
         setComments(commentsData[1].data.children);
-
       } catch (error) {
         setError(error.message);
       } finally {
@@ -64,7 +69,7 @@ function PostDetail() {
   }
 
   return (
-    <div className="PostDetail-Container">
+    <div className="PostDetail">
       <PostContent post={post} />
       {loadingComments ? (
         <Loading />
