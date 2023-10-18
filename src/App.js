@@ -1,10 +1,11 @@
 import "./App.css";
 import HomePage from "./containers/HomePage";
 import Layout from "./components/Layout";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLocation } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PostDetail from "./containers/PostDetail";
 import NotFound from "./components/NotFound";
+import AppTracking from "./containers/AppTracking";
 
 function App() {
   const [data, setData] = useState("");
@@ -12,6 +13,8 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const location = useLocation();
+  
   
 
   useEffect(() => {
@@ -47,6 +50,9 @@ function App() {
       }
     };
 
+   
+  
+
     // Trigger the fetchData function when necessary
     if (triggerSearch) {
       fetchData();
@@ -69,6 +75,7 @@ function App() {
 
   return (
     <Router>
+      <AppTracking />
       <Routes>
         <Route path="/" element={<Layout onSearch={handleSearch} />}>
           <Route
