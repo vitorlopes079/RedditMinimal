@@ -9,7 +9,7 @@ const HomePage = ({ data, isLoading, error }) => {
     const elapsedTime = currentTime - created_utc; //
     const secondsInAnHour = 3600;
     const secondsInADay = 86400;
-    console.log(data)
+    
 
     if (elapsedTime < secondsInAnHour) {
       return `${Math.floor(elapsedTime / 60)} minutes ago`;

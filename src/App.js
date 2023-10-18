@@ -29,7 +29,7 @@ function App() {
             )}`
         : "https://www.reddit.com/r/popular.json";
 
-        console.log("endpoint", endpoint)
+        
 
       try {
         const response = await fetch(endpoint);
