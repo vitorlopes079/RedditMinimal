@@ -1,8 +1,13 @@
 import "./App.css";
 import HomePage from "./containers/HomePage";
 import Layout from "./components/Layout";
-import { useEffect, useState, useLocation } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  
+} from "react-router-dom";
 import PostDetail from "./containers/PostDetail";
 import NotFound from "./components/NotFound";
 import AppTracking from "./containers/AppTracking";
@@ -13,8 +18,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const location = useLocation();
-  
   
 
   useEffect(() => {
@@ -28,8 +31,6 @@ function App() {
               searchTerm
             )}`
         : "https://www.reddit.com/r/popular.json";
-
-        
 
       try {
         const response = await fetch(endpoint);
@@ -49,9 +50,6 @@ function App() {
         );
       }
     };
-
-   
-  
 
     // Trigger the fetchData function when necessary
     if (triggerSearch) {
