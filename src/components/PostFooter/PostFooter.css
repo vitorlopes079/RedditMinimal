@@ -1,0 +1,95 @@
+.PostFooter {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around; /* Centralize content */
+  
+  padding: 0.5em;
+  width: 95%;
+  position: relative; /* Keep for absolute positioning if needed */
+}
+
+.PostFooter > * {
+  flex-basis: calc(100% / 3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding: 15px 0;
+  transition: flex-grow 0.3s ease, max-width 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s; /* Add transition for flex-grow and visibility */
+}
+
+.PostFooter .postedBy {
+  font-family: "Pacifico", cursive;
+  flex-grow: 0; /* Start without growing */
+  max-width: 100%; /* Start with a max width of 100% to centralize */
+  margin: 0;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align the flex items */
+  justify-content: center; /* Center justify the content */
+}
+
+
+/* Hover effects */
+.PostFooter:hover .postedBy {
+  flex-grow: 1; /* Allow .postedBy to grow on hover */
+  max-width: 100%; /* Full width of its container on hover */
+  overflow: visible; /* Show overflowed text on hover */
+  white-space: normal; /* Let text wrap if needed */
+}
+
+.PostFooter:hover .timeSince,
+.PostFooter:hover .comments {
+  opacity: 0; /* Fade out */
+  visibility: hidden; /* Hide from the document flow */
+  max-width: 0; /* Ensure they take up no space */
+  flex-grow: 0; /* Prevent them from growing */
+}
+
+.PostFooter .author {
+  color: #274c77;
+  margin: 0;
+  max-width: 120px; /* Controls when the text collapses */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 5px;
+}
+
+.PostFooter:hover .author {
+  max-width: none; /* Allow the text to expand */
+}
+
+.PostFooter .timeSince {
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
+  color: #8b8c89;
+  margin: 0;
+
+}
+
+.PostFooter .comments {
+  color: #8b8c89;
+  font-family: "Pacifico", cursive;
+  margin: 0;
+}
+
+/* Responsive design adjustments for tablets */
+@media (min-width: 576px) and (max-width: 768px) {
+  .PostFooter .postedBy, 
+  .PostFooter .author,
+  .PostFooter .timeSince,
+  .PostFooter .comments {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive design adjustments for mobile devices */
+@media (max-width: 576px) {
+  .PostFooter .postedBy, 
+  .PostFooter .author,
+  .PostFooter .timeSince,
+  .PostFooter .comments {
+    font-size: 0.85rem;
+  }
+}

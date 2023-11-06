@@ -1,16 +1,11 @@
 import "./App.css";
-import HomePage from "./containers/HomePage";
-import Layout from "./components/Layout";
+import HomePage from "./containers/HomePage/HomePage";
+import Layout from "./components/Layout/Layout";
 import { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  
-} from "react-router-dom";
-import PostDetail from "./containers/PostDetail";
-import NotFound from "./components/NotFound";
-import AppTracking from "./containers/AppTracking";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PostDetail from "./containers/PostDetail/PostDetail";
+import NotFound from "./components/NotFound/NotFound";
+import AppTracking from "./containers/AppTracking/AppTracking";
 
 function App() {
   const [data, setData] = useState("");
@@ -18,7 +13,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
 
   useEffect(() => {
     // Function to fetch data from the Reddit API

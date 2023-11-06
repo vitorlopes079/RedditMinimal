@@ -1,0 +1,158 @@
+.PostContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 750px;
+  background-color: #f9f8e4;
+  box-shadow: 5px 5px 5px #888888;
+  margin-top: 35px;
+  border-radius: 5px;
+}
+
+a {
+  color: black;        
+  text-decoration: none; 
+}
+
+a:hover {
+  cursor: pointer;     
+  
+  text-decoration: underline; 
+}
+
+.PostContainer h1 {
+  margin: 30px 30px 20px;
+  font-family: "Courier Prime", monospace;
+  letter-spacing: -1px;
+  font-size: 1.65rem;
+}
+
+.PostContainer p {
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+}
+
+.PostContainer h1,
+.PostContainer p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.PostContainer .conditional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.PostContainer .conditional a {
+  color: blue;
+}
+
+.PostContainer img,
+.PostContainer video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.PostContainer .video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.PostContainer .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.PostContainer .image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding-bottom: 0; /* Start with no padding */
+}
+
+/* Use these only after detecting the image orientation */
+.PostContainer .image-container.landscape {
+  padding-bottom: 30.25%; /* Aspect ratio 16:9 */
+}
+.PostContainer .image-container.vertical {
+  padding-bottom: 58.33%; /* Aspect ratio 3:4 */
+}
+.PostContainer .image-container.square {
+  padding-bottom: 50%;
+}
+
+.PostContainer .image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+  .PostContainer {
+    width: 75%; 
+    max-width: 680px;
+    margin-top: 30px; 
+  }
+
+  .PostContainer h1 {
+    margin: 25px 25px 18px;
+    
+  }
+
+  .PostContainer p {
+    margin: 0 25px 18px;
+    font-size: 1rem; 
+  }
+}
+
+
+
+@media (min-width: 780px) and (max-width: 1100px) {
+  .PostContainer {
+    width: 75%;
+    max-width: 715px;
+    margin-top: 32.5px;
+  }
+
+  .PostContainer h1 {
+    margin: 27.5px 27.5px 19px;
+    
+  }
+
+  .PostContainer p {
+    margin: 0 27.5px 19px;
+    font-size: 1.0625rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 780px){
+  .PostContainer h1 {
+    font-size: 1.35rem; 
+
+  }
+
+  .PostContainer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .PostContainer h1 {
+    font-size: 1.3rem; 
+  }
+}
+

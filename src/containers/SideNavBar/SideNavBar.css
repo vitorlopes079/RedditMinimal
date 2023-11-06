@@ -1,0 +1,187 @@
+.SideNavBar {
+  width: 205px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #333;
+  min-height:  100vh;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  overflow-y: auto;
+  padding: 20px 0 100px;
+  transition: 0.3s;
+  border-top: 1px solid #f9f8e4;
+  border-right: 1px solid #f9f8e4;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.SideNavBar p,
+.SideNavBar .icon,
+.SideNavBar .sideBarButton {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.SideNavBar p,
+.SideNavBar .sideBarButton {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+}
+
+.SideNavBar p:hover,
+.SideNavBar .icon:hover,
+.SideNavBar .sideBarButton:hover {
+  background-color: #575757;
+}
+
+.SideNavBar .popular {
+  text-align: center;
+  border-bottom: 1px solid #f9f8e4;
+  min-height: 75px;
+}
+
+.SideNavBar .icon {
+  padding: 0 2px;
+}
+
+.SideNavBar .subjects {
+  padding-top: 20px;
+}
+
+.SideNavBar .arrow {
+  padding-right: 12px;
+  color: #f9f8e4;
+}
+
+.SideNavBar .sideBarButton {
+  appearance: none;
+  background: transparent;
+  border: none;
+  text-align: center;
+  color: #f9f8e4;
+  font-size: 1.1rem;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+
+/* Scrollbar Styles */
+.SideNavBar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.SideNavBar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.SideNavBar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.SideNavBar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.SideNavBar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.SideNavBar .icon p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+@media (min-width: 800px) and (max-width: 1110px) {
+  .SideNavBar {
+    width: 175px;
+    padding: 12px 0 80px;
+    font-size: 0.85rem;
+    height: 100vh;
+  }
+
+  .SideNavBar p,
+  .SideNavBar .sideBarButton {
+    padding: 7px 10px;
+    font-size: 1rem;
+  }
+
+  .SideNavBar .sideBarButton {
+    font-size: 0.95rem;
+    margin: 0 8px;
+  }
+
+  .SideNavBar .popular {
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1250px) {
+  .SideNavBar {
+    width: 185px; /* reduced from 205px */
+    padding: 15px 0 90px; /* reduced padding */
+    font-size: 0.9rem; /* scaled font-size down */
+    height: 100vh;
+  }
+
+  .SideNavBar p,
+  .SideNavBar .sideBarButton {
+    padding: 8px 12px; /* reduced padding */
+    font-size: 1.1rem; /* scaled font-size down */
+  }
+
+  .SideNavBar .sideBarButton {
+    font-size: 1rem; /* scaled font-size down */
+    margin: 0 10px; /* reduced margin */
+  }
+
+  .SideNavBar .popular {
+    min-height: 65px; /* reduced min-height */
+  }
+}
+
+
+@media (min-width: 780px) and (max-width: 880px) {
+  /* Hide the icons */
+  .SideNavBar .icon {
+    display: none;
+  }
+
+  /* Adjust font size and padding for paragraph tags and buttons */
+  .SideNavBar p,
+  .SideNavBar .sideBarButton {
+    padding: 5px 10px; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  /* If the button font size needs to be different from the paragraph tags */
+  .SideNavBar .sideBarButton {
+    font-size: 0.85rem; /* Even smaller font size for buttons */
+  }
+
+  /* Adjust the width and padding of the side navigation bar itself */
+  .SideNavBar {
+    width: 150px; /* Smaller width */
+    padding: 10px 0; /* Smaller vertical padding */
+  }
+
+  /* Further adjustments to the .popular class if necessary */
+  .SideNavBar .popular {
+    min-height: 50px; /* Optionally, a smaller height */
+    /* Other styling adjustments */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 780px) {
+  .SideNavBar {
+    display: none;
+  }
+}

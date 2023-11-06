@@ -1,0 +1,82 @@
+.subjectItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.subjectItem .subjectContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.subjectItem .subjectContainer p,
+.subjectItem .subjectContainer:hover .arrow {
+  padding: 10px 15px;
+  font-size: 1.2rem; 
+  color: white;
+}
+
+.subjectItem .subjectContainer:hover {
+  background-color: #575757;
+}
+
+.subjectItem .arrow {
+  padding-right: 12px;
+  color: #f9f8e4;
+}
+
+.subjectItem .moreSubjects {
+  display: none;
+  padding: 0 15px;
+}
+
+.subjectItem .subjectContainer p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Add media queries for subjectItem to match SideNavBar */
+@media (min-width: 800px) and (max-width: 1110px) {
+.subjectItem .subjectContainer,
+.subjectItem .subjectContainer p {
+  padding: 7px 10px; /* Match padding */
+  font-size: 1rem; /* Match font size */
+}
+
+
+}
+
+@media (min-width: 1100px) and (max-width: 1250px) {
+.subjectItem .subjectContainer,
+.subjectItem .subjectContainer p {
+  padding: 8px 12px; /* Match padding */
+  font-size: 1.1rem; /* Match font size */
+}
+
+/* Add any other adjustments for the .subjectItem as you have for .SideNavBar */
+}
+
+@media (max-width: 880px) {
+  /* Hide the subjectContainers in subjectItem */
+  .subjectItem .icon {
+    display: none;
+  }
+
+  .subjectItem .subjectContainer p,
+  .subjectItem .subjectContainer:hover .arrow {
+    padding: 5px 10px; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+}
+
+@media (max-width: 768px) {
+
+.subjectItem {
+  display: none;
+}
+}
