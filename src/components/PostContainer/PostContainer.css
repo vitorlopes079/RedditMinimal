@@ -9,14 +9,28 @@
   box-shadow: 5px 5px 5px #888888;
   margin-top: 35px;
   border-radius: 5px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-a {
+.PostContainer h1,
+.PostContainer p,
+.PostContainer ul /* add other selectors as needed */ {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.PostContainer a {
   color: black;        
   text-decoration: none; 
+  display: inline-block; 
+  hyphens: auto;
+  word-break: break-all;
+  white-space: normal;
+  
 }
 
-a:hover {
+.PostContainer:hover {
   cursor: pointer;     
   
   text-decoration: underline; 
