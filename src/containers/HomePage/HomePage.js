@@ -2,26 +2,9 @@ import React from "react";
 import Loading from "../../components/Loading/Loading";
 import NetworkError from "../../components/NetworkError/NetworkError";
 import PostContainer from "../../components/PostContainer/PostContainer";
+import { getTimeSincePost } from "../../assets/timeUtils";
 
 const HomePage = ({ data, isLoading, error }) => {
-  function getTimeSincePost(created_utc) {
-    const currentTime = Math.floor(Date.now() / 1000);
-    const elapsedTime = currentTime - created_utc; //
-    const secondsInAnHour = 3600;
-    const secondsInADay = 86400;
-
-    if (elapsedTime < secondsInAnHour) {
-      const minutes = Math.floor(elapsedTime / 60);
-      return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
-    } else if (elapsedTime < secondsInADay) {
-      const hours = Math.floor(elapsedTime / secondsInAnHour);
-      return `${hours} hour${hours === 1 ? "" : "s"} ago`;
-    } else {
-      const days = Math.floor(elapsedTime / secondsInADay);
-      return `${days} day${days === 1 ? "" : "s"} ago`;
-    }
-  }
-
   function content() {
     if (isLoading) {
       return (
@@ -40,7 +23,6 @@ const HomePage = ({ data, isLoading, error }) => {
         const author = post.data.author;
         const timeSince = getTimeSincePost(post.data.created_utc);
         const numComments = post.data.num_comments;
-
         const isRedditMedia = post.data.is_reddit_media_domain;
         const isImagePost =
           isRedditMedia &&
@@ -52,9 +34,10 @@ const HomePage = ({ data, isLoading, error }) => {
           ? post.data.secure_media.reddit_video.fallback_url
           : null;
         const imageUrl = isImagePost ? post.data.url : post.data.thumbnail;
-        console.log(post);
+       
         return (
           <PostContainer
+            key={post.data.id}
             isImagePost={isImagePost}
             isVideoLink={isVideoLink}
             videoUrl={videoUrl}

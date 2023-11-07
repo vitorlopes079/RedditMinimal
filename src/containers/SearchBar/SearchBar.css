@@ -32,10 +32,53 @@
   color: #f9f8e4;
   padding: 0.31rem 0.62rem;
   border-radius: 5px;
+  font-size: 1.31rem; /* Assuming this is where you want the base font size for the button */
 }
 
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .SearchBar input {
     font-size: 0.875rem;
+  }
+}
+
+/* Media query for screens smaller than 750px */
+@media (max-width: 750px) {
+  .SearchBar {
+    padding: 0 0.5rem; /* reduce padding */
+    width: 50%; /* increase width to give more space to the input */
+  }
+
+  .SearchBar input {
+    font-size: 0.8rem; /* reduce font size */
+    padding: 0.2rem; /* reduce padding */
+  }
+
+  .SearchBar .btn {
+    padding: 0.2rem 0.4rem; /* reduce padding */
+    /* The font-size for .btn is already declared in the base class */
+  }
+}
+
+/* Media query for screens smaller than 450px */
+@media (max-width: 450px) {
+  .SearchBar .search-icon {
+    display: none;
+  }
+}
+
+/* New media query for screens smaller than 380px */
+@media (max-width: 380px) {
+  .SearchBar {
+    width: 40%; /* further reduce the width of the search bar */
+  }
+
+  .SearchBar input {
+    font-size: 0.75rem; /* further reduce font size */
+    padding: 0.25rem; /* adjust padding if necessary */
+  }
+
+  .SearchBar .btn {
+    padding: 0.2rem 0.35rem; /* slightly reduce padding if necessary */
   }
 }

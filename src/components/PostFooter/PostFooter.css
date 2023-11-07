@@ -3,7 +3,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around; /* Centralize content */
-  
+  height: 50px;
   padding: 0.5em;
   width: 95%;
   position: relative; /* Keep for absolute positioning if needed */
@@ -27,6 +27,7 @@
   display: flex; /* Use flexbox for alignment */
   align-items: center; /* Center align the flex items */
   justify-content: center; /* Center justify the content */
+  max-height: 30px;
 }
 
 
@@ -36,6 +37,8 @@
   max-width: 100%; /* Full width of its container on hover */
   overflow: visible; /* Show overflowed text on hover */
   white-space: normal; /* Let text wrap if needed */
+  max-height: 30x;
+  white-space: nowrap;
 }
 
 .PostFooter:hover .timeSince,
@@ -49,11 +52,12 @@
 .PostFooter .author {
   color: #274c77;
   margin: 0;
-  max-width: 120px; /* Controls when the text collapses */
+  max-width: 180px; /* Controls when the text collapses */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0 5px;
+  max-height: 30px;
 }
 
 .PostFooter:hover .author {
@@ -81,6 +85,7 @@
   .PostFooter .timeSince,
   .PostFooter .comments {
     font-size: 0.9rem;
+    
   }
 }
 

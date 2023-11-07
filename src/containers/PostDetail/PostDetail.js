@@ -6,6 +6,7 @@ import NetworkError from "../../components/NetworkError/NetworkError";
 import PostContainer from "../../components/PostContainer/PostContainer";
 import Comments from "../../components/Comments/Comments";
 import "./PostDetail.css";
+import { getTimeSincePost } from "../../assets/timeUtils";
 
 function PostDetail() {
   const { id } = useParams();
@@ -15,24 +16,6 @@ function PostDetail() {
   const [error, setError] = useState(null);
   const [comments, setComments] = useState([]);
   const [numCommentsToShow, setNumCommentsToShow] = useState(10);
-
-  function getTimeSincePost(created_utc) {
-    const currentTime = Math.floor(Date.now() / 1000);
-    const elapsedTime = currentTime - created_utc; //
-    const secondsInAnHour = 3600;
-    const secondsInADay = 86400;
-
-    if (elapsedTime < secondsInAnHour) {
-      const minutes = Math.floor(elapsedTime / 60);
-      return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
-    } else if (elapsedTime < secondsInADay) {
-      const hours = Math.floor(elapsedTime / secondsInAnHour);
-      return `${hours} hour${hours === 1 ? "" : "s"} ago`;
-    } else {
-      const days = Math.floor(elapsedTime / secondsInADay);
-      return `${days} day${days === 1 ? "" : "s"} ago`;
-    }
-  }
 
   useEffect(() => {
     const fetchPostAndComments = async () => {

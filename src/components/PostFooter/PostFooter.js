@@ -5,7 +5,7 @@ import "./PostFooter.css";
 
 const PostFooter = ({ author, timeSince, numComments }) => {
   return (
-    <div className="PostFooter">
+    <div className="PostFooter" data-testid="post-footer">
       <p className="postedBy">
         posted by: <span className="author">{author}</span>
       </p>

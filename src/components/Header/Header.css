@@ -7,6 +7,7 @@
   font-family: "Libre Baskerville";
   border-bottom: 1px solid #f9f8e4;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 10;
 }
@@ -38,17 +39,45 @@
   }
 
   .Header .logo h4 {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1110px) {
   .Header {
-      padding: 0 15px; 
+    padding: 0 15px;
   }
 
   .Header .logo h4 {
-      font-size: 1.15rem; 
-      padding-top: 2.5px; 
+    font-size: 1.15rem;
+    padding-top: 2.5px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Header {
+    padding: 0 5%; /* proportional padding */
+    height: auto; /* allow the header to adjust its height as needed */
+  }
+
+  .Header .logo img {
+    width: 40px; /* smaller logo */
+    height: 44px; /* maintain aspect ratio */
+  }
+
+  .Header .logo h4 {
+    font-size: 0.9rem; /* smaller font-size */
+  }
+}
+
+@media (max-width: 350px) {
+  
+  .Header {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Header .logo h4 {
+    display: none;
+   
   }
 }

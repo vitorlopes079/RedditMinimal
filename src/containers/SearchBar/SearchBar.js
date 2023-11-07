@@ -26,7 +26,7 @@ const SearchBar = ({ onSearch }) => {
         <FontAwesomeIcon
           icon={faSearch}
           aria-hidden="true"
-          className="fa-lg"
+          className="search-icon"
           style={{ fontSize: "1.31rem" }}
         />
       </button>
