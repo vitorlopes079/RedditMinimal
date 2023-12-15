@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 3.75rem;
+  height: 3.8rem;
   background-color: #333;
   font-family: "Libre Baskerville";
   border-bottom: 1px solid #f9f8e4;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   color: #f9f8e4;
+  cursor: pointer;
 }
 
 .Header .logo img {
@@ -54,30 +55,28 @@
   }
 }
 
-@media (max-width: 750px) {
-  .Header {
-    padding: 0 5%; /* proportional padding */
-    height: auto; /* allow the header to adjust its height as needed */
-  }
-
-  .Header .logo img {
-    width: 40px; /* smaller logo */
-    height: 44px; /* maintain aspect ratio */
-  }
-
-  .Header .logo h4 {
-    font-size: 0.9rem; /* smaller font-size */
-  }
-}
-
-@media (max-width: 350px) {
-  
+@media (max-width: 550px) {
   .Header {
     justify-content: space-around;
     align-items: center;
   }
   .Header .logo h4 {
     display: none;
-   
+  }
+}
+
+@media (max-width: 750px) {
+  .Header {
+    padding: 0 5%;
+    height: auto;
+  }
+
+  .Header .logo img {
+    width: 40px;
+    height: 44px;
+
+    .Header .logo h4 {
+      font-size: 0.9rem;
+    }
   }
 }

@@ -2,7 +2,8 @@ main {
   background-color: #819ea2;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 45px;
+  padding-bottom: 25px;
   align-items: center;
   min-height: 100vh;
  

@@ -9,16 +9,6 @@
   position: relative; /* Keep for absolute positioning if needed */
 }
 
-.PostFooter > * {
-  flex-basis: calc(100% / 3);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  padding: 15px 0;
-  transition: flex-grow 0.3s ease, max-width 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s; /* Add transition for flex-grow and visibility */
-}
-
 .PostFooter .postedBy {
   font-family: "Pacifico", cursive;
   flex-grow: 0; /* Start without growing */
@@ -28,25 +18,6 @@
   align-items: center; /* Center align the flex items */
   justify-content: center; /* Center justify the content */
   max-height: 30px;
-}
-
-
-/* Hover effects */
-.PostFooter:hover .postedBy {
-  flex-grow: 1; /* Allow .postedBy to grow on hover */
-  max-width: 100%; /* Full width of its container on hover */
-  overflow: visible; /* Show overflowed text on hover */
-  white-space: normal; /* Let text wrap if needed */
-  max-height: 30x;
-  white-space: nowrap;
-}
-
-.PostFooter:hover .timeSince,
-.PostFooter:hover .comments {
-  opacity: 0; /* Fade out */
-  visibility: hidden; /* Hide from the document flow */
-  max-width: 0; /* Ensure they take up no space */
-  flex-grow: 0; /* Prevent them from growing */
 }
 
 .PostFooter .author {
@@ -60,16 +31,11 @@
   max-height: 30px;
 }
 
-.PostFooter:hover .author {
-  max-width: none; /* Allow the text to expand */
-}
-
 .PostFooter .timeSince {
   font-family: "Pacifico", cursive;
   font-weight: 700;
   color: #8b8c89;
   margin: 0;
-
 }
 
 .PostFooter .comments {
@@ -80,21 +46,38 @@
 
 /* Responsive design adjustments for tablets */
 @media (min-width: 576px) and (max-width: 768px) {
-  .PostFooter .postedBy, 
+  .PostFooter .postedBy,
   .PostFooter .author,
   .PostFooter .timeSince,
   .PostFooter .comments {
-    font-size: 0.9rem;
-    
+    font-size: 0.7rem;
   }
 }
 
 /* Responsive design adjustments for mobile devices */
 @media (max-width: 576px) {
-  .PostFooter .postedBy, 
+  .PostFooter .postedBy,
   .PostFooter .author,
   .PostFooter .timeSince,
   .PostFooter .comments {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    padding: 1px
+  }
+
+  .PostFooter .timeSince,
+  .PostFooter .comments {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    display: none;
+   
+  }
+
+  .PostFooter {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0rem;
+    min-height: 25px;
+    margin-bottom: 8px;
+    
   }
 }

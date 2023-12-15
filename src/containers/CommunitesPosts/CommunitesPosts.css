@@ -56,97 +56,99 @@
 
   @media (min-width: 1100px) and (max-width: 1300px) {
     .Communites {
-        top: 5.25rem; /* reduced value */
-        right: 1.5rem; /* reduced value */
-        height: 26.6875rem; /* reduced height */
-        width: 12.5rem; /* reduced width */
+        top: 5.25rem; 
+        right: 1.5rem; 
+        height: 26.6875rem; 
+        width: 12.5rem; 
     }
   
     .Communites header {
-        padding: 0.4rem; /* reduced padding */
+        padding: 0.4rem; 
     }
   
     .Communites header h4 {
-        padding: 0.2rem 0; /* reduced padding */
+        padding: 0.2rem 0; 
     }
   
     .Communites .body {
-        margin: 0.8rem 0.5rem; /* reduced margin */
-        padding: 0.25rem; /* reduced padding */
+        margin: 0.8rem 0.5rem;
+        padding: 0.25rem; 
     }
   
     .Communites .body h4 {
-        margin: 0 0.25rem; /* reduced margin */
+        margin: 0 0.25rem; 
     }
   
     .Communites .body p {
-        font-size: 0.8rem; /* scaled font-size down */
+        font-size: 0.8rem; 
     }
 }
 
-@media (min-width: 1015px) and (max-width: 1110px) {
+@media (min-width: 1030px) and (max-width: 1110px) {
   .Communites {
-      top: 4.5rem; /* further reduced value */
-      right: 1.25rem; /* further reduced value */
-      height: 24.6875rem; /* further reduced height */
-      width: 11.5rem; /* further reduced width */
+      top: 4.5rem; 
+      right: 1.25rem; 
+      height: 24.6875rem; 
+      width: 11.5rem; 
+      margin-top: 10px;
+      margin-left: 5px;
   }
 
   .Communites header {
-      padding: 0.35rem; /* further reduced padding */
+      padding: 0.35rem; 
   }
 
   .Communites header h4 {
-      padding: 0.18rem 0; /* further reduced padding */
+      padding: 0.18rem 0; 
   }
 
   .Communites .body {
-      margin: 0.7rem 0.45rem; /* further reduced margin */
-      padding: 0.22rem; /* further reduced padding */
+      margin: 0.7rem 0.45rem; 
+      padding: 0.22rem; 
   }
 
   .Communites .body h4 {
-      margin: 0 0.22rem; /* further reduced margin */
+      margin: 0 0.22rem; 
   }
 
   .Communites .body p {
-      font-size: 0.78rem; /* further scaled font-size down */
+      font-size: 0.78rem; 
   }
 }
 
-@media (min-width: 870px) and (max-width: 1015px) {
+@media (min-width: 870px) and (max-width: 1030px) {
   .Communites {
-    top: 6rem; /* Smaller top offset */
-    right: 1.5rem; /* Smaller right offset */
-    height: 22rem; /* Significantly smaller height */
-    width: 8.75rem; /* Significantly smaller width */
+    top: 6rem; 
+    right: 1.5rem; 
+    height: 24rem; /* Slightly increased */
+    width: 9.25rem; /* Slightly increased */
   }
 
   .Communites header {
-    padding: 0.25rem; /* Smaller padding */
+    padding: 0.3rem; /* Slightly increased */
   }
 
   .Communites header h4 {
-    padding: 0.1rem 0; /* Smaller padding */
-    font-size: 0.9rem; /* Smaller font size */
+    padding: 0.12rem 0; /* Slightly increased */
+    font-size: 0.95rem; /* Slightly increased */
   }
 
   .Communites .body {
-    margin: 0.5rem 0.3rem; /* Smaller margin */
-    padding: 0.15rem; /* Smaller padding */
+    margin: 0.55rem 0.35rem; /* Slightly increased */
+    padding: 0.18rem; /* Slightly increased */
   }
 
   .Communites .body h4 {
-    margin: 0 0.15rem; /* Smaller margin */
-    font-size: 0.85rem; /* Smaller font size */
+    margin: 0 0.18rem; /* Slightly increased */
+    font-size: 0.88rem; /* Slightly increased */
   }
 
   .Communites .body p {
-    font-size: 0.7rem; /* Significantly smaller font size */
+    font-size: 0.73rem; /* Slightly increased */
   }
 }
   
-  /* Media query for smaller screens */
+  
   @media (max-width: 870px) {
     .Communites {
       display: none;

@@ -21,9 +21,9 @@ const SideNavBar = ({ onClick }) => {
 
   const toggleSubject = (subjectId) => {
     if (expandedSubject === subjectId) {
-      setExpandedSubject(""); // If the subject is already expanded, collapse it.
+      setExpandedSubject(""); 
     } else {
-      setExpandedSubject(subjectId); // Otherwise, expand this subject and collapse others.
+      setExpandedSubject(subjectId); 
     }
   };
 

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PostDetail from "./containers/PostDetail/PostDetail";
 import NotFound from "./components/NotFound/NotFound";
-import AppTracking from "./containers/AppTracking/AppTracking";
 
 function App() {
   const [data, setData] = useState("");
@@ -13,6 +12,8 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  console.log("running");
 
   useEffect(() => {
     // Function to fetch data from the Reddit API
@@ -67,9 +68,8 @@ function App() {
 
   return (
     <Router>
-      <AppTracking />
       <Routes>
-        <Route path="/" element={<Layout onSearch={handleSearch} />}>
+        <Route path="/" element={<Layout onSearch={handleSearch} handleSearch={handleSearch} />}>
           <Route
             index
             element={
