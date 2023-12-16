@@ -60,23 +60,4 @@
 /* Add any other adjustments for the .subjectItem as you have for .SideNavBar */
 }
 
-@media (max-width: 880px) {
-  /* Hide the subjectContainers in subjectItem */
-  .subjectItem .icon {
-    display: none;
-  }
 
-  .subjectItem .subjectContainer p,
-  .subjectItem .subjectContainer:hover .arrow {
-    padding: 5px 10px; /* Smaller padding */
-    font-size: 0.9rem; /* Smaller font size */
-  }
-
-}
-
-@media (max-width: 768px) {
-
-.subjectItem {
-  display: none;
-}
-}

@@ -6,10 +6,9 @@ main {
   padding-bottom: 25px;
   align-items: center;
   min-height: 100vh;
- 
 }
 
-.Posts-container{
+.Posts-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +16,41 @@ main {
   width: 75%;
 }
 
+.arrowRight {
+  color: #333;
+  font-size: 25px;
+}
 
+.arrowRight:hover {
+  color: #555;
+  cursor: pointer;
+}
 
+/* Optional: Slight increase in size on hover */
+.arrowRight:hover {
+  transform: scale(1.1);
+}
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.arrowRight {
+  animation: pulse 2s infinite;
+}
+
+.toggle-nav {
+  display: none;
+  position: fixed;
+  left: 15px;
+  top: 50%;
+  z-index: 1000;
+}
+
+@media (max-width: 800px) {
+  .toggle-nav {
+    display: block;
+  }
+}

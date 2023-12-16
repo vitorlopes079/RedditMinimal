@@ -7,12 +7,14 @@ import {
   subjectsData,
   additionalSubjectsData,
 } from "../../assets/subjectsData";
-import { faUpLong } from "@fortawesome/free-solid-svg-icons";
+import { faUpLong, faX } from "@fortawesome/free-solid-svg-icons";
 
-const SideNavBar = ({ onClick }) => {
+const SideNavBar = ({ onClick, isNavVisible, toggleNav }) => {
   const [showAllTopics, setShowAllTopics] = useState(false);
   const [expandedSubject, setExpandedSubject] = useState("");
   const navigate = useNavigate();
+
+  
 
   const handleClick = (subjectText) => {
     onClick(subjectText);
@@ -21,14 +23,18 @@ const SideNavBar = ({ onClick }) => {
 
   const toggleSubject = (subjectId) => {
     if (expandedSubject === subjectId) {
-      setExpandedSubject(""); 
+      setExpandedSubject("");
     } else {
-      setExpandedSubject(subjectId); 
+      setExpandedSubject(subjectId);
     }
   };
 
   return (
-    <div className="SideNavBar">
+    <div className={`SideNavBar ${isNavVisible ? '' : 'hidden'}`}>
+      <div className="closeTabDiv">
+        <FontAwesomeIcon icon={faX} className="closeTab" onClick={toggleNav}/>
+      </div>
+      
       <div className="popular ">
         <p onClick={() => handleClick("Popular")} data-testid="popularItem">
           <FontAwesomeIcon icon={faUpLong} className="icon" /> Popular
@@ -44,7 +50,6 @@ const SideNavBar = ({ onClick }) => {
             onSubjectClick={handleClick}
             onToggleSubject={toggleSubject}
             isExpanded={expandedSubject === subject.id}
-            
           />
         ))}
       </div>
@@ -55,7 +60,8 @@ const SideNavBar = ({ onClick }) => {
       >
         {additionalSubjectsData.map((subject) => (
           <p key={subject.id} onClick={() => handleClick(subject.title)}>
-            <FontAwesomeIcon icon={subject.icon} className="icon"/> {subject.title}
+            <FontAwesomeIcon icon={subject.icon} className="icon" />{" "}
+            {subject.title}
           </p>
         ))}
       </div>
