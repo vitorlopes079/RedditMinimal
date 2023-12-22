@@ -162,7 +162,7 @@
   }
 }
 
-@media (min-width: 780px) and (max-width: 880px) {
+@media (min-width: 800px) and (max-width: 880px) {
   .SideNavBar .icon {
     display: none;
   }
@@ -184,10 +184,7 @@
 }
 
 @media (max-width: 800px) {
-  .SideNavBar {
-    width: 210px;
-  }
-
+  
   .closeTab {
     display: inline;
     font-size: 20px;

@@ -48,7 +48,7 @@
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .PostContainer h1,
@@ -142,11 +142,12 @@
 
   .PostContainer h1 {
     margin: 27.5px 27.5px 19px;
+    font-size: 1.2rem;
   }
 
   .PostContainer p {
     margin: 0 27.5px 19px;
-    font-size: 1.0625rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 600px) and (max-width: 780px) {
@@ -186,5 +187,6 @@
 @media (max-width: 350px) {
   .PostContainer{
     margin-top: 15px;
+
   }
 }
