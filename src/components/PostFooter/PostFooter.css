@@ -2,28 +2,29 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around; /* Centralize content */
+  justify-content: space-around; 
   height: 50px;
   padding: 0.5em;
   width: 95%;
-  position: relative; /* Keep for absolute positioning if needed */
+  position: relative; 
 }
 
 .PostFooter .postedBy {
-  font-family: "Pacifico", cursive;
-  flex-grow: 0; /* Start without growing */
-  max-width: 100%; /* Start with a max width of 100% to centralize */
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  flex-grow: 0; 
+  max-width: 100%; 
   margin: 0;
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center align the flex items */
-  justify-content: center; /* Center justify the content */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
   max-height: 30px;
 }
 
 .PostFooter .author {
   color: #274c77;
   margin: 0;
-  max-width: 180px; /* Controls when the text collapses */
+  max-width: 180px; 
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -32,15 +33,17 @@
 }
 
 .PostFooter .timeSince {
-  font-family: "Pacifico", cursive;
-  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+
   color: #8b8c89;
   margin: 0;
 }
 
 .PostFooter .comments {
   color: #8b8c89;
-  font-family: "Pacifico", cursive;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -61,7 +64,7 @@
   .PostFooter .timeSince,
   .PostFooter .comments {
     font-size: 0.7rem;
-    padding: 1px
+    padding: 1px;
   }
 
   .PostFooter .timeSince,
@@ -69,7 +72,6 @@
     font-size: 0.7rem;
     letter-spacing: 1px;
     display: none;
-   
   }
 
   .PostFooter {
@@ -78,6 +80,5 @@
     padding: 0rem;
     min-height: 25px;
     margin-bottom: 8px;
-    
   }
 }

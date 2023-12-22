@@ -6,7 +6,7 @@ import CommunitesPosts from "../../containers/CommunitesPosts/CommunitesPosts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-function Layout({ onSearch, handleSearch }) {
+function Layout({ onSearch }) {
   const [isNavVisible, setIsNavVisible] = useState(window.innerWidth > 800);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function Layout({ onSearch, handleSearch }) {
 
   return (
     <div>
-      <Header onSearch={onSearch} handleClick={() => handleSearch("popular")} />
+      <Header onSearch={onSearch} onClick={onSearch} />
       <div className="toggle-nav" onClick={toggleNav}>
         {isNavVisible ? null : (
           <FontAwesomeIcon icon={faChevronRight} className="arrowRight" />
