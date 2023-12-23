@@ -3,19 +3,20 @@
   justify-content: space-around;
   align-items: center;
   height: 3.8rem;
-  background-color: #333;
-  font-family: "Libre Baskerville";
-  border-bottom: 1px solid #f9f8e4;
+  background-color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  border-bottom: 1px solid #e5e7eb;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 
 .Header .logo {
   display: flex;
   align-items: center;
-  color: #f9f8e4;
+  color: black;
   cursor: pointer;
 }
 
@@ -30,7 +31,7 @@
 }
 
 .Header span {
-  color: #819ea2;
+  color: #ff4500;
 }
 
 @media (max-width: 768px) {

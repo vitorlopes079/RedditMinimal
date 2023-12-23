@@ -5,13 +5,12 @@
   justify-content: space-between;
   width: 90%;
   max-width: 750px;
-  background-color: #f9f8e4;
-  box-shadow: 5px 5px 5px #888888;
+  background-color: white;
+  box-shadow: 2px 2px 2px #e5e7eb;
   margin-top: 35px;
   border-radius: 5px;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  
 }
 
 .PostContainer h1,
@@ -22,7 +21,7 @@
 }
 
 .PostContainer a {
-  color: black;
+  color: #111827;
   text-decoration: none;
   display: inline-block;
   hyphens: auto;
@@ -38,7 +37,8 @@
 
 .PostContainer h1 {
   margin: 30px 30px 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #374151;
   font-weight: bold;
   letter-spacing: -1px;
   font-size: 1.5rem;
@@ -46,9 +46,10 @@
 
 .PostContainer p {
   margin-bottom: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: lighter;
   font-size: 1rem;
+  color: #374151;
 }
 
 .PostContainer h1,
@@ -62,10 +63,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.PostContainer .conditional a {
-  color: blue;
 }
 
 .PostContainer img,
@@ -158,8 +155,6 @@
   .PostContainer p {
     font-size: 1rem;
   }
-
-
 }
 
 @media (max-width: 600px) {
@@ -167,8 +162,8 @@
     font-size: 1.1rem;
   }
 
-  .PostContainer  p{
-    font-size: 1.0rem
+  .PostContainer p {
+    font-size: 1rem;
   }
 
   .PostContainer .image-container {
@@ -179,14 +174,10 @@
     min-height: 135px;
     min-width: 135px;
   }
-
-
-  
 }
 
 @media (max-width: 350px) {
-  .PostContainer{
+  .PostContainer {
     margin-top: 15px;
-
   }
 }

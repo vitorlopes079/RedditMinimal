@@ -9,13 +9,13 @@
   position: relative;
   margin-top: 30px;
   font-size: 0.7rem;
-  
-  border-top: 1px solid #dad8d8; 
+
+  border-top: 1px solid #dad8d8;
 }
 
 .PostFooter .postedBy {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #8b8c89;
   flex-grow: 0;
   width: 180px;
   max-width: 180px;
@@ -28,8 +28,9 @@
 }
 
 .PostFooter .author {
-  color: #274c77;
+  color: #ff4500;
   margin: 0;
+  margin-left: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -39,8 +40,7 @@
 }
 
 .PostFooter .timeSince {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-family: "IBM Plex Sans", sans-serif;
   color: #8b8c89;
   margin: 0;
   width: 180px;
@@ -53,8 +53,7 @@
 
 .PostFooter .comments {
   color: #8b8c89;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
   width: 180px;
   max-width: 180px;
@@ -64,9 +63,7 @@
   font-size: 0.9rem;
 }
 
-/* Responsive design adjustments for tablets */
 
-/* Responsive design adjustments for mobile devices */
 @media (max-width: 576px) {
   .PostFooter .postedBy,
   .PostFooter .author,

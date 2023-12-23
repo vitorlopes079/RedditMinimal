@@ -4,23 +4,24 @@
     right: 1.875rem; 
     height: 29.6875rem; 
     width: 13.75rem;
-    background-color: #f9f8e4;
-    border: solid 1px #333;
+    background-color: white;
+    border: solid 1px #e5e7eb;
     z-index: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    color: #374151;
   }
   
   .Communites header {
-    background-color: #333;
-    color: #f9f8e4;
+    background-color: #e5e7eb;
+    color: #111827;
     padding: 0.5rem; 
     font-weight: bold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
     margin: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
   }
   
   .Communites header h4 {
@@ -31,7 +32,7 @@
   
   .Communites .body {
     margin: 0.9375rem 0.625rem;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     padding: 0.3125rem; 

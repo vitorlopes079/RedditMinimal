@@ -10,6 +10,7 @@
     font-size: 10px;
     text-decoration: underline;
     padding: 5px;
+    font-family: 'Noto Sans', sans-serif;
   }
   
   .Comment .btn:hover {
