@@ -1,3 +1,5 @@
+![Screenshot of Application](public/redditDesktop2.gif)
+
 # Reddit Minimal
 
 Reddit Minimal is a dynamic web application designed to enhance the experience of browsing Reddit content. Users can seamlessly search for posts, view images, videos, and read comments. The app's intuitive design also allows for exploration of content by categories, showcasing posts from the most popular communities on Reddit.
@@ -27,4 +29,4 @@ The roadmap for Reddit Minimal includes several enhancements to enrich user expe
 
 - **Direct Links to Reddit**: Future versions will include direct links that redirect users to the official Reddit page for a specific post or video.
 - **End-to-End Testing**: Plans to implement comprehensive end-to-end testing will ensure a robust and reliable application.
-- **Redux Integration**: Incorporating Redux to manage the application's state more efficiently and to streamline the data flow across components.
+components.
